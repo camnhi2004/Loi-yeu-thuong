@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gửi chồng yêu 💌</title>
+  <style>
+    body {
+      background: radial-gradient(circle at center, #ffe5ec, #ffc2d1);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 30px;
+      color: #c9184a;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 20px;
+      white-space: pre-line;
+    }
+
+    .heart {
+      font-size: 50px;
+      animation: beat 1s infinite alternate;
+      margin: 20px 0;
+    }
+
+    .wish {
+      background: #fff;
+      padding: 20px;
+      margin-top: 20px;
+      display: inline-block;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 800px;
+      width: 90%;
+      color: #333;
+    }
+
+    .wish-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #c9184a;
+      margin-bottom: 10px;
+    }
+
+    @keyframes beat {
+      from { transform: scale(1); }
+      to { transform: scale(1.3); }
+    }
+
+    .floating-heart {
+      position: fixed;
+      font-size: 15px;
+      font-weight: bold;
+      animation: float 5s linear forwards;
+      pointer-events: none;
+      opacity: 0.8;
+      z-index: 999;
+      color: #ff4d6d;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>💌 Gửi đến chồng yêu của vợ 💌</h1>
+
+  <!-- Lời tỏ tình chính -->
+  <p>
+    Chúc mừng kĩ niệm 1 năm yêu nhau của chúng ta 26-04  
+    Cảm ơn chồng đã đồng hành bên vợ thời gian qua!  
+    Chúng ta sẽ mãi mãi ở cạnh nhau chồng nhé!
+    Vợ yêu chồng nhiều lắm. ❤️
+  </p>
+
+  <div class="heart">❤️</div>
+
+  <!-- Khung lời chúc phụ -->
+  <div class="wish">
+    <div class="wish-title">Lời chúc nhỏ dành riêng cho chồng yêu ✨</div>
+    <p>
+      Vợ mong chồng luôn cười thật nhiều, gặp nhiều may mắn và tiếp tục đồng hành cùng vợ trên đoạn đường phía trước.  
+      Yêu chồng nhiều hơn cả hôm qua.  
+      Một mong ước nữa là chúng ta có thể về chung một nhà 💖  
+      I LOVE YOU SO MUCHHHHHH!
+    </p>
+  </div>
+
+  <!-- Nhạc nền -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/11/16/audio_5e2b6e0b39.mp3?filename=romantic-piano-loop-12451.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Hiệu ứng trái tim bay -->
+  <script>
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.classList.add("floating-heart");
+      heart.innerText = "💗 Vợ yêu chồng 💖";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (3 + Math.random() * 2) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }, 700);
+  </script>
+</body>
+</html>
